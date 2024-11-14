@@ -1,0 +1,64 @@
+circle{
+    fill-opacity: 0.9;
+}
+
+line{
+    stroke:black;
+    stroke-opacity:0.9;
+}
+
+.controller {
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+#leftPanel {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    height: auto;
+    background-color:rgba(112, 141, 180, 0.6)
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+svg{
+    width: 90vw;
+    height: 90vw;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(247, 247, 248);
+}
+h1{
+    text-align: center
+}
+
+#tooltip {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: auto;
+    padding: 10px;
+    background: white;
+    font-family: sans-serif;
+    font-size: large;
+    border-radius: 2px;
+    pointer-events: none;
+    line-height: 1;
+}
+
+circle:hover{ 
+    cursor: pointer; 
+}

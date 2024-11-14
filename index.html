@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make Force Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <script src="network.js"></script>
+    <h1>Network Virtualization - Authors and their respective affiliations</h1>
+</head>
+<body>
+<div id="tooltip"></div>
+<div class ="controller" id="leftPanel">
+    <h4>Control</h4>
+    <form>
+        <div>
+        <label for="forceManyBody">Force Many Body</label>
+        <input type="range" name="forceManyBody" id="forceManyBody" min="-20" max="10" value="-12">
+        </div>
+        <div>
+        <label for="forceLink">Force Link Strength</label>
+        <input type="range" name="forceLink" id="forceLink" min="0" max="1" value="0.5" step="0.1">
+        </div>
+        <div>
+        <label for="forceCollide">Force Collide Radius</label>
+        <input type="range" name="forceCollide" id="forceCollide" min="0" max="18" value="5">
+        </div>
+    </form>
+</div>
+<script>
+    d3.json("publication_network.json").then(function (data){
+        let svg = d3.select('body').append("svg").attr("viewBox","0 0 1800 1600")
+
+        simulate(data,svg) // main function to make network
+    })
+</script>
+
+</body>
+</html>
